@@ -1,0 +1,213 @@
+<!--
+
+	Rikaisan-universal
+	Copyright (C) 2018 eyeS Code
+	http://code.google.com/p/rikaisan-universal
+
+	***
+
+	Originally based on Rikaikun
+	by Erek Speed
+	Copyright (C) 2010 Erek Speed
+	http://code.google.com/p/rikaikun/
+	
+	***
+
+	Originally based on Rikaichan 1.07
+	by Jonathan Zarate
+	http://www.polarcloud.com/
+
+	***
+
+	Originally based on RikaiXUL 0.4 by Todd Rudick
+	http://www.rikai.com/
+	http://rikaixul.mozdev.org/
+
+	***
+
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program; if not, write to the Free Software
+	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+	***
+
+	Please do not change or remove any of the copyrights or links to web pages
+	when modifying any of the files. - Jon
+
+-->
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/options.css" />
+	<meta charset="utf-8"/>
+	<script src="changelangua.js"></script>	
+	<style>
+		.rikai select { /* <select> */
+		background: white; /* importante para exibir o novo ícone */
+		width: 268px;
+		padding: 5px;
+		font-size: 16px;
+		line-height: 1;
+		border: 0;
+		border-radius: 0;
+		height: 34px;
+		-webkit-appearance: none;
+		}     	
+	</style>
+</head>
+	<body>
+		<div id="rikaikun_options">
+<!--			<div id="tabs">
+				<div id="general" class="tab selected-tab">General</div><div id="keyboard" class="tab active-tab">Keyboard</div><div id="worddict" class="tab">Word Dictionary</div><div id="kanjidict" class="tab active-tab">Kanji Dictionary</div><div id="namedict" class="tab">Names Dictionary</div><div id="clipboard" class="tab active-tab">Clipboard</div>
+			</div> -->
+			<form id="optform" name="optform">
+				<div id="options">
+					<div id="gencon" class="tabContent">
+						<div class="rikai">
+							<h1><span id="ling">Select your language: </span>
+								<select name="language" id="language">
+									<option value="0" select="selected">English</option>
+									<option value="1">Portuguese</option>
+							</select></h1></div>
+					<h1 id='general'>General</h1>
+						<p><span id="popupclr">Popup color</span>:
+							<select class="inputfield" id="popupcolor" name="popupcolor">
+								<option value="blue">Blue</option>
+								<option value="lightblue">Light Blue</option>
+								<option value="black">Black</option>
+								<option value="yellow">Yellow</option>
+							</select>
+							<br />
+							<span id="dpl">Default popup location:</span>
+							<select class="inputfield" id="popupLocation" name="popupLocation">
+								<option value="0">Cursor</option>
+								<option value="1">Top Left</option>
+								<option value="2">Bottom Right</option>
+							</select>
+							<br />
+							<input type="checkbox" id="highlighttext" name="highlighttext">
+							<span id="rlt">Highlight text</span>
+							<br />
+							<input type="checkbox" id="textboxhl" name="textboxhl">
+							<span id="rtb">Highlight text inside of text boxes</span>
+							<br />
+							<input type="checkbox" id="onlyreading" name="onlyreading">
+							<span id="eds">Hide definitions and show only reading</span>
+							<br />
+							<input type="checkbox" id="minihelp" name="minihelp">
+							<span id="smh">Show mini help</span>
+							<br />
+							<br />
+							<span id="spwd">Show popup with delay:</span>
+              <input type="number" id="popupDelay" name="popupDelay" min="1"> <spand id="milis">milliseconds</spand>
+							</p>
+					</div>
+					<!-- <div id="keycon" class="tabcontent hide"> -->
+					<div id="keycon" class="tabContent">
+					<h1 id="keybor">Keyboard</h1>
+						<span id="mpo">Show popup only on pressed key:</span><br />
+						<input type="radio" name="showOnKey" value=""><span id="nu">Not used</span><br />
+						<input type="radio" name="showOnKey" value="Alt">Alt<br />
+						<input type="radio" name="showOnKey" value="Ctrl">Ctrl<br />
+						<input type="radio" name="showOnKey" value="Alt+Ctrl">Alt+Ctrl<br />
+						<br />
+						<strong><span id="kwp">Keys when popup is visible</span></strong><br><br>
+						<table cellspacing=5>
+						<tr><td>A</td><td><span id="apl">Alternate popup location</span></td></tr>
+						<tr><td>Y</td><td><span id="mpld">Move popup location down</span></td></tr>
+						<tr><td>C</td><td><span id="ctc">Copy to clipboard</span></td></tr>
+						<tr><td>D</td><td><span id="hsd">Hide/show definitions</span></td></tr>
+						<tr><td>Shift/Enter&nbsp;&nbsp;</td><td><span id="sdd">Switch dictionaries</span></td></tr>
+						<tr><td>B</td><td><span id="ppc">Previous character</span></td></tr>
+						<tr><td>M</td><td><span id="ncc">Next character</span></td></tr>
+						<tr><td>N</td><td><span id="nww">Next word</span></td></tr>
+						</table>
+							<br />
+							<input type="checkbox" id="disablekeys" name="disablekeys">
+							<span id="dtk">Disable these keys</span>
+					</div>
+					<div id="kanjicon" class="tabContent">
+					<h1 id="kdic">Kanji Dictionary</h1>
+						<p>
+						<strong><span id="dispi">Displayed information:</span></strong><br><br>
+							<input type="checkbox" id="kanjicomponents" name="kanjicomponents">
+							<span id="kcc">Kanji Components</span>
+							<br />
+							<input type="checkbox" id="H" name="H">
+							Halpern
+							<br />
+							<input type="checkbox" id="L" name="L">
+							Heisig
+							<br />
+							<input type="checkbox" id="E" name="E">
+							Henshall
+							<br />
+							<input type="checkbox" id="DK" name="DK">
+							Kanji Learners Dictionary
+							<br />
+							<input type="checkbox" id="N" name="N">
+							Nelson
+							<br />
+							<input type="checkbox" id="V" name="V">
+							New Nelson
+							<br />
+							<input type="checkbox" id="Y" name="Y">
+							PinYin
+							<br />
+							<input type="checkbox" id="P" name="P">
+							Skip Pattern
+							<br />
+							<input type="checkbox" id="IN" name="IN">
+							Tuttle Kanji &amp; Kana
+							<br />
+							<input type="checkbox" id="I" name="I">
+							Tuttle Kanji Dictionary
+							<br />
+							<input type="checkbox" id="U" name="U">
+							Unicode
+							<br />
+						</p>
+					</div>
+					<div id="clipcon" class="tabContent">
+					<h1 id="ctcc">Copy to Clipboard</h1>
+						<p>
+						<table cellspacing=5>
+						<tr>
+							<td><span id="ledg">Line ending:</span></td>
+							<td><select id="lineEnding" name="lineEnding">
+								<option value="n">Unix (\n)</option>
+								<option value="rn">Windows (\r\n)</option>
+								<option value="r">Mac (\r)</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td><span id="fisp">Field separator:</span></td>
+							<td><select id="copySeparator" name="copySeparator">
+								<option value="tab">Tab</option>
+								<option value="comma">Comma</option>
+								<option value="space">Space</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td><span id="mee">Maximum entries:</span></td>
+							<td><input type="number" id="maxClipCopyEntries" name="maxClipCopyEntries" min="1"></td>
+						</tr>
+						</table>
+						</p>
+					</div>
+				</div>
+			<p><input type="submit" id="submit" value="Save" /></p>
+			</form>
+		</div>
+	</body>
+	<script src="options.js"></script>
+</html>
