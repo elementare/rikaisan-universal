@@ -171,8 +171,16 @@ rcxDict.prototype = {
 			var promises = [
 				this.loadFileToTarget('dictpt.dat', false, 'wordDict'),
 				this.loadFileToTarget('dictpt.idx', false, 'wordIndex'),
-				this.loadFileToTarget('kanjipt.dat', false, 'kanjiData'),
-				this.loadFileToTarget('radicalspt.dat', true, 'radData')
+				this.loadFileToTarget('kanji.dat', false, 'kanjiData'),
+				this.loadFileToTarget('radicals.dat', true, 'radData')
+			];
+		}
+		if (rcxDict.prototype.language == '2'){
+			var promises = [
+				this.loadFileToTarget('dictes.dat', false, 'wordDict'),
+				this.loadFileToTarget('dictes.idx', false, 'wordIndex'),
+				this.loadFileToTarget('kanji.dat', false, 'kanjiData'),
+				this.loadFileToTarget('radicals.dat', true, 'radData')
 			];
 		}
 

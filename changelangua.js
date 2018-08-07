@@ -34,9 +34,10 @@ function lingua(){
 	var e = document.getElementById("language");
 	var itemSelecionado = e.options[e.selectedIndex].value;
 	if(itemSelecionado == '1'){
-        document.getElementById('ling').innerHTML='Selecione seu idioma:'
-        document.getElementById('language').options[0].innerHTML='Inglês'
-        document.getElementById('language').options[1].innerHTML='Português'
+        document.getElementById('ling').innerHTML='Selecione seu idioma:';
+        document.getElementById('language').options[0].innerHTML='Inglês';
+		document.getElementById('language').options[1].innerHTML='Português';
+		document.getElementById('language').options[2].innerHTML='Espanhol';
 		document.getElementById('popupcolor').options[0].innerHTML="Azul";
 		document.getElementById('popupcolor').options[1].innerHTML="Azul claro";
 		document.getElementById('popupcolor').options[2].innerHTML="Preto";
@@ -75,10 +76,11 @@ function lingua(){
 		document.getElementById('copySeparator').options[2].innerHTML="Espaço";
 		document.getElementById('mee').innerHTML="Número máximo de entradas:";
         document.getElementById('submit').value="Salvar";
-	}else{
-        document.getElementById('ling').innerHTML='Select your language:'
-        document.getElementById('language').options[0].innerHTML='English'
-        document.getElementById('language').options[1].innerHTML='Portuguese'
+	}else if(itemSelecionado == '0'){
+        document.getElementById('ling').innerHTML='Select your language:';
+        document.getElementById('language').options[0].innerHTML='English';
+		document.getElementById('language').options[1].innerHTML='Portuguese';
+		document.getElementById('language').options[1].innerHTML='Spanish';
 		document.getElementById('popupcolor').options[0].innerHTML="Blue";
 		document.getElementById('popupcolor').options[1].innerHTML="Light Blue";
 		document.getElementById('popupcolor').options[2].innerHTML="Black";
@@ -117,5 +119,48 @@ function lingua(){
 		document.getElementById('copySeparator').options[2].innerHTML="Space";
 		document.getElementById('mee').innerHTML="Maximun entries:";
         document.getElementById('submit').value="Save";    
-    }	
+    }else{
+		document.getElementById('ling'). innerHTML = 'Seleccione su idioma:';
+		document.getElementById('language').options[0].innerHTML ='Inglés';
+		document.getElementById('language').options[1].innerHTML ="Portuguesa";
+		document.getElementById('language').options[2].innerHTML = "Español";
+		document.getElementById('popupcolor').options[0].innerHTML ="Azul.";
+		document.getElementById('popupcolor').options[1].innerHTML = "Azul claro";
+		document.getElementById('popupcolor').options[2].innerHTML = "Negro";
+		document.getElementById('popupcolor').options[3].innerHTML = "Amarillo.";
+		document.getElementById('general').innerHTML = "General";
+		document.getElementById('popupclr').innerHTML = "Color del popup";
+		document.getElementById('dpl').innerHTML = "Ubicación predeterminada del popup";
+		document.getElementById('popupLocation').options[1].innerHTML = "Canto superior izquierdo";
+		document.getElementById('popupLocation'). options[2].innerHTML = "Canto inferior derecho";
+		document.getElementById('rlt').innerHTML = "Resaltar texto";
+		document.getElementById('rtb').innerHTML = "Resalte el texto dentro de los cuadros de texto";
+		document.getElementById('eds').innerHTML = "Ocultar definiciones y mostrar sólo lectura";
+		document.getElementById('smh').innerHTML = "Mostrar mini ayuda";
+		document.getElementById('spwd').innerHTML = "Mostrar pop-up con retraso";
+		document.getElementById('milis').innerHTML = "milisegundos";
+		document.getElementById('keybor').innerHTML = "teclado.";
+		document.getElementById('mpo').innerHTML = "Mostrar pop-up sólo en la tecla presionada";
+		document.getElementById('nu').innerHTML = "No utilizado";
+		document.getElementById('kwp').innerHTML = "Teclas cuando el pop-up es visible";
+		document.getElementById('apl').innerHTML = "Ubicación de popup alternativo";
+		document.getElementById('mpld').innerHTML = "Mover la ubicación del popup hacia abajo";
+		document.getElementById('ctc').innerHTML = "Copiar al portapapeles";
+		document.getElementById('hsd').innerHTML = "Ocultar / mostrar definiciones";
+		document.getElementById('sdd').innerHTML = "Cambiar diccionarios";
+		document.getElementById('ppc').innerHTML = "Carácter anterior";
+		document.getElementById('ncc').innerHTML = "Siguiente carácter";
+		document.getElementById('nww').innerHTML = "Siguiente palabra";
+		document.getElementById('dtk').innerHTML = "Desactivar estas teclas";
+		document.getElementById('kdic').innerHTML = "Diccionario de Kanji"
+		document.getElementById('dispi').innerHTML = "Información mostrada:";
+		document.getElementById('kcc').innerHTML = "Componentes Kanji";
+		document.getElementById('ctcc').innerHTML = "Copiar al portapapeles";
+		document.getElementById('ledg').innerHTML = "Final de línea:";
+		document.getElementById('fisp').innerHTML = "Separador de campo:";
+		document.getElementById('copySeparator').options[1].innerHTML = "coma.";
+		document.getElementById('copySeparator').options[2].innerHTML ="espacio";
+		document.getElementById('mee').innerHTML = "Número máximo de entradas:";
+		document.getElementById('submit').value = "Guardar";		
+	}
 }
